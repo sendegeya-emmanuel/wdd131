@@ -1,0 +1,108 @@
+/* Core Page Resets and Typography */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f7f9fa;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling - Centered and Blocks */
+header {
+    background-color: #0077b6;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* CSS Flex Navigation with Hover Effects */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background-color: #005f9e;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #0077b6;
+    border-radius: 4px;
+}
+
+/* Centered Main Layout with Centered Width */
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main h1 {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+/* CSS Grid Layout for Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.card h2 {
+    color: #2a9d8f;
+    margin-top: 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Footer Design */
+footer {
+    background-color: #232b2b;
+    color: #eeeeee;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
