@@ -1,0 +1,81 @@
+/* Base Page Resets */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    /* CSS Grid Layout Strategy */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+        "header header header"
+        "left main right"
+        "footer footer footer";
+}
+
+/* Assigning elements to Grid Areas */
+header {
+    grid-area: header;
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+}
+
+.left-sidebar {
+    grid-area: left;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.right-sidebar {
+    grid-area: right;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #2a9d8f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* CSS Flexbox Navigation Styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness Adjustment */
+@media (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "left"
+            "right"
+            "footer";
+    }
+}
