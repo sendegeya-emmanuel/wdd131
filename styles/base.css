@@ -1,4 +1,4 @@
-/* Core Page Architecture and Standard Typo */
+/* Core Page Architecture and Standard Typography */
 body {
     margin: 0;
     padding: 0;
@@ -186,4 +186,13 @@ footer {
 
 footer p {
     margin: 6px 0;
+}
+
+/* Force the last modification text to be visible and distinct */
+#lastModified {
+    color: #b57c00 !important;
+    /* Gold/yellow color match to fit Rubia's layout style */
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
 }
