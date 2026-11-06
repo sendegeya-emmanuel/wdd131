@@ -173,11 +173,12 @@ main h1 {
     color: #cc0000;
 }
 
-* Footer design with dark blue background to contrast with gold text */ footer {
-    background-color: #054a75;
-    /* Change background from white to dark blue */
-    color: #ffffff;
-    /* First paragraph links turn white */
+/* Footer design with matching dark blue background and gold text */
+footer {
+    background-color: #164e75 !important;
+    /* Exact blue color from Rubia's footer */
+    color: #ffffff !important;
+    /* Copyright text in pure white */
     text-align: center;
     padding: 20px;
     border-top: 1px solid #b4c6d0;
@@ -189,10 +190,10 @@ footer p {
     margin: 6px 0;
 }
 
-/* Force the last modification text to be gold, bold, and perfectly visible */
+/* Force the last modification text to match Rubia's yellow color */
 #lastModified {
     color: #ccff00 !important;
-    /* Brighter gold/yellow text to shine on dark blue */
+    /* Exact neon yellow color for perfect visibility */
     font-weight: bold;
     margin-top: 5px;
     display: block;
