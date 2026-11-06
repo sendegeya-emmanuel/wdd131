@@ -1,5 +1,4 @@
-/* Core Page Resets and Typography */
-body {
+* Core Page Architecture and Standard Typo */ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', Arial, sans-serif;
@@ -10,50 +9,52 @@ body {
     min-height: 100vh;
 }
 
-/* Header Styling - Centered and Blocks */
 header {
-    background-color: #0077b6;
+    background-color: #054a75;
     color: #ffffff;
-    padding: 20px;
+    padding: 15px 20px;
     text-align: center;
 }
 
+/* Set the span in header to block for easy centering as requested */
 #course-title {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
 }
 
-/* CSS Flex Navigation with Hover Effects */
+/* CSS Flex on the navigation nav as requested */
 nav {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    background-color: #005f9e;
-    padding: 10px;
-    border-radius: 4px;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5px 0;
 }
 
 nav a {
-    color: #ffffff;
+    color: #d1e3f0;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
     padding: 5px 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
+/* Safe Hover Effect: Changes only color and shadow to preserve layout placement */
 nav a:hover {
-    background-color: #ffffff;
-    color: #0077b6;
-    border-radius: 4px;
+    color: #ffffff;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+    text-decoration: underline;
 }
 
-/* Centered Main Layout with Centered Width */
+/* Limited Width Centered Main Section */
 main {
-    max-width: 960px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 15px;
     flex: 1;
     width: 100%;
     box-sizing: border-box;
@@ -61,48 +62,127 @@ main {
 
 main h1 {
     text-align: center;
-    color: #0077b6;
-    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: #054a75;
+    margin-bottom: 25px;
 }
 
-/* CSS Grid Layout for Cards */
+/* CSS Grid for the Main Cards Columns */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 25px;
 }
 
+/* Fallback for smaller mobile views */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Individual Card Blocks Layout */
 .card {
     background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
+    border: 1px solid #b4c6d0;
+    border-radius: 6px;
+    overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    background-color: #164e75;
+    color: #ffffff;
+    padding: 12px;
     text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
 
-.card h2 {
-    color: #2a9d8f;
-    margin-top: 0;
+.card-content {
+    padding: 20px;
 }
 
-.card img {
-    max-width: 100%;
-    height: auto;
+/* Inner Profile Arrangement Layout */
+.profile-section {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.bio-text {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.profile-img {
+    border: 1px solid #999999;
+    padding: 3px;
+    background-color: #ffffff;
+    object-fit: cover;
     border-radius: 4px;
-    margin-bottom: 15px;
 }
 
-/* Footer Design */
+.location-heading {
+    text-align: center;
+    font-weight: bold;
+    color: #164e75;
+    margin: 20px 0 15px 0;
+    font-size: 1.15rem;
+}
+
+/* Inner Flag Block Layout */
+.flag-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.flag-img {
+    border: 1px solid #cccccc;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flag-text {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Resource Lists Structure */
+.resources-list ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.resources-list li {
+    margin-bottom: 12px;
+}
+
+.resources-list a {
+    color: #0000ee;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.resources-list a:hover {
+    color: #cc0000;
+}
+
+/* Footer Element Style */
 footer {
-    background-color: #232b2b;
-    color: #eeeeee;
+    background-color: #ffffff;
+    color: #333333;
     text-align: center;
     padding: 20px;
+    border-top: 1px solid #b4c6d0;
+    font-size: 0.9rem;
     margin-top: auto;
 }
 
 footer p {
-    margin: 5px 0;
-    font-size: 0.9rem;
+    margin: 6px 0;
 }

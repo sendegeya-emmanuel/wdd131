@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Dynamic Web Fundamentals – Emmanuel Sendegeya</title>
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals course landing page developed by Emmanuel Sendegeya. Contains course links, projects, and localized landmark data context.">
+        content="WDD 131 – Dynamic Web Fundamentals course landing page developed by Emmanuel Sendegeya. This page profiles my web design journey, favorite scriptures, and health-tech integrations.">
     <meta name="author" content="Emmanuel Sendegeya">
 
-    <!-- Google Fonts Integration -->
+    <!-- Google Fonts API Link (Roboto) -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- External CSS & JavaScript Reference with Defer -->
+    <!-- External Asset Links -->
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
 </head>
@@ -36,19 +36,46 @@
         <h1>Emmanuel Sendegeya</h1>
 
         <div class="grid-container">
+            <!-- Card 1: About Me -->
+            <!-- CARD 1: ABOUT ME -->
             <section class="card">
-                <h2>Burundi Overview</h2>
-                <img src="images/cto-workspace.webp"
-                    alt="Emmanuel Sendegeya working on TeleMed Burundi software development" width="400" height="267">
-                <p>Developing tech solutions tailored to low-bandwidth environments across our 5 strategic health
-                    provinces and 42 communes.</p>
+                <div class="card-header">About Me</div>
+                <div class="card-content">
+                    <div class="profile-section">
+                        <p class="bio-text">Hi, my name is Emmanuel Sendegeya. I am a Software Development student
+                            driven by a passion for building impactful healthcare digital solutions and secure network
+                            architectures.</p>
+                        <!-- Ta photo de profil en WebP -->
+                        <img src="images/cto-workspace.webp" alt="Emmanuel Sendegeya portrait" class="profile-img"
+                            width="150" height="150">
+                    </div>
+
+                    <div class="location-heading">Bujumbura, Burundi</div>
+
+                    <div class="flag-section">
+                        <!-- Le drapeau du Burundi en WebP -->
+                        <img src="images/burundi-flag.webp" alt="Official Flag of Burundi" class="flag-img" width="120"
+                            height="80">
+                        <p class="flag-text">Burundi is a beautiful East African country. We are currently developing
+                            technical health frameworks tailored to low-bandwidth environments across our 5 strategic
+                            health provinces and 42 communes.</p>
+                    </div>
+                </div>
             </section>
 
+            <!-- Card 2: Web Dev Resources -->
             <section class="card">
-                <h2>Web Development</h2>
-                <img src="images/coding-placeholder.webp" alt="Coding Workspace Environment" width="400" height="250">
-                <p>Building high-performance user interfaces and responsive layouts optimized for fast client-side
-                    rendering and durability.</p>
+                <div class="card-header">Web Dev Resources</div>
+                <div class="card-content resources-list">
+                    <ul>
+                        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                        <li><a href="https://smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://w3schools.com" target="_blank">W3Schools</a></li>
+                        <li><a href="https://udemy.com" target="_blank">Udemy</a></li>
+                        <li><a href="https://github.com" target="_blank">GitHub Pages Reference</a></li>
+                    </ul>
+                </div>
             </section>
         </div>
     </main>
@@ -59,5 +86,3 @@
     </footer>
 
 </body>
-
-</html>
