@@ -173,10 +173,11 @@ main h1 {
     color: #cc0000;
 }
 
-/* Footer Element Style */
-footer {
-    background-color: #ffffff;
-    color: #333333;
+* Footer design with dark blue background to contrast with gold text */ footer {
+    background-color: #054a75;
+    /* Change background from white to dark blue */
+    color: #ffffff;
+    /* First paragraph links turn white */
     text-align: center;
     padding: 20px;
     border-top: 1px solid #b4c6d0;
@@ -188,10 +189,10 @@ footer p {
     margin: 6px 0;
 }
 
-/* Force the last modification text to be visible and distinct */
+/* Force the last modification text to be gold, bold, and perfectly visible */
 #lastModified {
-    color: #b57c00 !important;
-    /* Gold/yellow color match to fit Rubia's layout style */
+    color: #ccff00 !important;
+    /* Brighter gold/yellow text to shine on dark blue */
     font-weight: bold;
     margin-top: 5px;
     display: block;
