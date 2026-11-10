@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Temple Picture Album - Emmanuel Sendegeya</title>
+    <meta name="description"
+        content="Responsive Temple Picture Album developed by Emmanuel Sendegeya for WDD 131. Showcases modern CSS Grid galleries and responsive navigation controls.">
+    <meta name="author" content="Emmanuel Sendegeya">
+
+    <!-- Google Fonts API Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Mobile-First External Asset Links -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button id="menu" aria-label="Toggle Navigation Menu"></button>
+            <nav class="navigation">
+                <a href="#" class="active">Home</a>
+                <a href="#">Old</a>
+                <a href="#">New</a>
+                <a href="#">Large</a>
+                <a href="#">Small</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+        <div class="gallery-grid">
+            <figure>
+                <img src="images/temple1.webp" alt="San Diego California Temple majestic front view with twin spires"
+                    class="temple-img" width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Front View</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple2.jpg" alt="San Diego California Temple side spires reaching into the sky"
+                    class="temple-img" width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Low Angle</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple3.jpg" alt="San Diego California Temple geometric golden windows detail"
+                    class="temple-img" width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Facade Detail</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple4.jpg" alt="San Diego California Temple courtyard entrance with vibrant flowers"
+                    class="temple-img" width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Main Entrance</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple5.jpg"
+                    alt="San Diego California Temple bright white structure framed by palm trees" class="temple-img"
+                    width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Garden View</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple6.jpg"
+                    alt="San Diego California Temple flowerbeds and pristine architectural walkways" class="temple-img"
+                    width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Temple Grounds</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple7.jpg" alt="San Diego California Temple geometric architectural peaks close up"
+                    class="temple-img" width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Spires Close-up</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple8.jpg" alt="San Diego California Temple wide exterior landscape view at dusk"
+                    class="temple-img" width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Wide Exterior</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple9.jpg"
+                    alt="San Diego California Temple panoramic daytime view with reflective lighting" class="temple-img"
+                    width="400" height="250" loading="lazy">
+                <figcaption>San Diego California - Full Panorama</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Emmanuel Sendegeya | Burundi</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
