@@ -1,0 +1,139 @@
+* Core Styling and Typography Rules */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f7f9fa;
+    color: #333333;
+}
+
+header {
+    background-color: #164e75;
+    color: #ffffff;
+    padding: 15px;
+    position: relative;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Responsive Hamburger Layout Toggle Parameters */
+#menu {
+    font-size: 1.8rem;
+    border: 0;
+    background: none;
+    color: #ffffff;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "≡"; /* Hamburger icon symbol */
+}
+
+#menu.show::before {
+    content: "❌"; /* Clean closing cross character */
+}
+
+/* Base mobile setup hides navigation links completely until toggle */
+.navigation {
+    display: none;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.navigation.show {
+    display: flex; /* Opens dynamically via JS class toggle */
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.navigation a:hover, .navigation a.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ccff00; /* Distinct bright yellow active feedback marker link */
+}
+
+/* Main Content Area Framework */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+main h2 {
+    text-align: center;
+    color: #164e75;
+    font-size: 1.8rem;
+}
+
+/* CSS Grid with single column mobile-first structure */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+figure {
+    margin: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccd9f8;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.temple-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 10px 5px 0 5px;
+    font-weight: 500;
+    color: #164e75;
+}
+
+/* Standardized Accessible Footer Layout */
+footer {
+    background-color: #164e75;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+#lastModified {
+    color: #ccff00 !important;
+    font-weight: bold;
+}
