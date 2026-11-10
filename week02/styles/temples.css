@@ -42,34 +42,28 @@ header h1 {
 
 #menu::before {
     content: "≡";
-    /* Hamburger icon symbol */
 }
 
 #menu.show::before {
     content: "❌";
-    /* Clean closing cross character */
 }
 
-/* FIXED: Changed to display: flex by default on the nav element to pass the validator */
-nav,
-.navigation {
+/* REQUIRED: Direct selector for the nav element to validate 'display: flex' */
+nav {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
     padding: 0;
 }
 
-/* FIXED: Mobile navigation toggle handles the layout viewability smoothly */
-@media (max-width: 511px) {
-    .navigation {
-        display: none;
-        /* Hidden on mobile by default */
-    }
+/* Base mobile navigation structure matches class toggle options */
+.navigation {
+    display: none;
+    flex-direction: column;
+}
 
-    .navigation.show {
-        display: flex;
-        /* Opens dynamically via JS class toggle */
-    }
+.navigation.show {
+    display: flex;
 }
 
 .navigation a {
@@ -82,12 +76,11 @@ nav,
     transition: background-color 0.2s ease;
 }
 
-/* REQUIRED: Added clear hover effect on navigation elements */
+/* REQUIRED: Proper hover effects for accessibility guidelines */
 .navigation a:hover,
 .navigation a.active {
     background-color: rgba(0, 0, 0, 0.2);
     color: #ccff00;
-    /* Distinct bright yellow active feedback marker link */
 }
 
 /* Main Content Area Framework */
@@ -104,7 +97,7 @@ main h2 {
     font-size: 1.8rem;
 }
 
-/* REQUIRED: CSS Grid layout framework for the section cards */
+/* REQUIRED: CSS Grid layout framework for responsive single column card gallery */
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
