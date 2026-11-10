@@ -1,0 +1,33 @@
+/* Media query adjustments for viewports 32rem (512px) or wider */
+@media only screen and (min-width: 32rem) {
+
+    #menu {
+        display: none;
+        /* Hide hamburger interface on desktop completely */
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Shift back to a horizontal CSS Flex row navigation row */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    .navigation a {
+        border-bottom: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+    }
+
+    /* Multi-column grid system layout automatically fits columns */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+}
