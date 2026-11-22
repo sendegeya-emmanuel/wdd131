@@ -2,7 +2,7 @@
     --primary-red: #ce1126;
     --primary-green: #1eb53a;
     --dark-green: #147a27;
-    --light-bg: rgba(255, 255, 255, 0.88);
+    --light-bg: rgba(255, 255, 255, 0.9);
     --text-dark: #1f2937;
     --text-light: #ffffff;
     --font-main: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@ body {
     font-family: var(--font-main);
     color: var(--text-dark);
     background-color: #f9fafb;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Header */
@@ -26,12 +26,12 @@ header {
     background-color: var(--primary-red);
     color: var(--text-light);
     text-align: center;
-    padding: 1.25rem 1rem;
-    border-bottom: 12px solid var(--primary-green);
+    padding: 1rem;
+    border-bottom: 10px solid var(--primary-green);
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -59,7 +59,7 @@ main {
 }
 
 .card h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: var(--text-dark);
 }
@@ -69,17 +69,17 @@ main {
     margin: 0 auto 1rem auto;
 }
 
-/* Clean two-column alignment without display: contents */
+/* Clean two-column alignment */
 .card ul {
     list-style: none;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
 }
 
 .card li {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.3rem;
 }
 
 .card li strong {
@@ -89,7 +89,7 @@ main {
 }
 
 .card li>span {
-    flex: 1;
+    flex: 1.3;
     text-align: left;
 }
 
@@ -98,12 +98,12 @@ footer {
     background-color: var(--primary-red);
     color: var(--text-light);
     text-align: center;
-    padding: 1.25rem 1rem;
-    font-size: 0.9rem;
+    padding: 1rem;
+    font-size: 0.88rem;
 }
 
 footer p {
-    margin: 0.2rem 0;
+    margin: 0.15rem 0;
 }
 
 /* =========================================
@@ -111,7 +111,8 @@ footer p {
    ========================================= */
 @media (min-width: 768px) {
     .hero img {
-        height: 620px;
+        height: 530px;
+        /* Fits cleanly above the fold */
     }
 
     .card {
@@ -120,26 +121,30 @@ footer p {
         border: none;
         border-radius: 4px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-        padding: 1.5rem 1.75rem;
-        width: 320px;
+        padding: 1.25rem 1.5rem;
     }
 
+    /* Data card top-left with room for overhanging ribbon */
     .card.data {
-        top: 2rem;
-        left: 2rem;
+        top: 1.75rem;
+        left: 2.75rem;
+        width: 365px;
     }
 
+    /* Weather card bottom-right */
     .card.weather {
-        bottom: 2rem;
+        bottom: 1.75rem;
         right: 2rem;
+        width: 300px;
     }
 
     .card h2 {
         background-color: var(--dark-green);
         color: var(--text-light);
         text-align: left;
-        padding: 0.6rem 1.25rem;
-        margin: -0.5rem 0 1.2rem -2.5rem;
+        padding: 0.5rem 1.25rem;
+        margin: -0.25rem 0 1rem -2.25rem;
+        /* Stays cleanly inside viewport */
         box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
         display: flex;
         align-items: center;
@@ -152,7 +157,7 @@ footer p {
 
     .card.weather h2::after {
         content: "⛅";
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         margin-left: 0.75rem;
     }
 }
