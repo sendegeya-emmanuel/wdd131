@@ -1,0 +1,163 @@
+:root {
+    --primary-red: #ce1126;
+    --primary-green: #1eb53a;
+    --dark-green: #147a27;
+    --light-bg: rgba(255, 255, 255, 0.88);
+    --text-dark: #1f2937;
+    --text-light: #ffffff;
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: #f9fafb;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    border-bottom: 12px solid var(--primary-green);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Main & Hero Image */
+main {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Cards (Mobile View Default) */
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.weather-svg {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Two-column key/value alignment inside lists */
+.card ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 0.6rem;
+    font-size: 0.92rem;
+}
+
+.card li {
+    display: contents;
+}
+
+.card li strong {
+    text-align: right;
+    font-weight: 700;
+}
+
+.card li span,
+.card li {
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+/* =========================================
+   DESKTOP / WIDER VIEW (Matches Example)
+   ========================================= */
+@media (min-width: 768px) {
+    .hero img {
+        height: 620px;
+    }
+
+    .card {
+        position: absolute;
+        background-color: var(--light-bg);
+        backdrop-filter: blur(4px);
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        padding: 1.5rem 1.75rem;
+        width: 320px;
+    }
+
+    /* Data card top-left */
+    .card.data {
+        top: 2rem;
+        left: 2rem;
+    }
+
+    /* Weather card bottom-right */
+    .card.weather {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    /* Green ribbon headers overhanging left like Madagascar example */
+    .card h2 {
+        background-color: var(--primary-green);
+        color: var(--text-light);
+        text-align: left;
+        padding: 0.6rem 1.25rem;
+        margin: -0.5rem 0 1.2rem -2.5rem;
+        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Hide mobile SVG in desktop view */
+    .weather-svg {
+        display: none;
+    }
+
+    /* Pseudo-element weather icon in wide view */
+    .card.weather h2::after {
+        content: "⛅";
+        font-size: 1.6rem;
+        margin-left: 0.75rem;
+    }
+}
