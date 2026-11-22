@@ -69,26 +69,27 @@ main {
     margin: 0 auto 1rem auto;
 }
 
-/* Two-column key/value alignment inside lists */
+/* Clean two-column alignment without display: contents */
 .card ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.4rem 0.6rem;
     font-size: 0.92rem;
 }
 
 .card li {
-    display: contents;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
 }
 
 .card li strong {
+    flex: 1;
     text-align: right;
     font-weight: 700;
 }
 
-.card li span,
-.card li {
+.card li>span {
+    flex: 1;
     text-align: left;
 }
 
@@ -106,7 +107,7 @@ footer p {
 }
 
 /* =========================================
-   DESKTOP / WIDER VIEW (Matches Example)
+   DESKTOP / WIDER VIEW
    ========================================= */
 @media (min-width: 768px) {
     .hero img {
@@ -123,19 +124,16 @@ footer p {
         width: 320px;
     }
 
-    /* Data card top-left */
     .card.data {
         top: 2rem;
         left: 2rem;
     }
 
-    /* Weather card bottom-right */
     .card.weather {
         bottom: 2rem;
         right: 2rem;
     }
 
-    /* Green ribbon headers overhanging left like Madagascar example */
     .card h2 {
         background-color: var(--dark-green);
         color: var(--text-light);
@@ -148,12 +146,10 @@ footer p {
         justify-content: space-between;
     }
 
-    /* Hide mobile SVG in desktop view */
     .weather-svg {
         display: none;
     }
 
-    /* Pseudo-element weather icon in wide view */
     .card.weather h2::after {
         content: "⛅";
         font-size: 1.6rem;
