@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Navigation menu hamburger event listener (Matches your CSS '.show')
+    // 1. Navigation menu hamburger event listener
     const menuButton = document.querySelector('#menu');
     const navigationMenu = document.querySelector('.navigation');
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    // 3. Array of 10 Temple Objects (7 provided + 3 added)
+    // 3. Array of 10 Temple Objects
     const temples = [
         {
             templeName: "Aba Nigeria",
@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageTitle = document.querySelector("#page-title");
 
     function createTempleCards(filteredTemples) {
+        if (!gallery) return;
         gallery.innerHTML = "";
 
         filteredTemples.forEach((temple) => {
@@ -122,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.setAttribute("src", temple.imageUrl);
             img.setAttribute("alt", `${temple.templeName} Temple`);
             img.setAttribute("loading", "lazy");
+            img.setAttribute("referrerpolicy", "no-referrer");
             img.setAttribute("width", "400");
             img.setAttribute("height", "250");
 
@@ -140,41 +142,42 @@ document.addEventListener("DOMContentLoaded", () => {
     // 5. Filter Event Listeners
     function setActiveLink(activeId) {
         document.querySelectorAll(".navigation a").forEach((link) => link.classList.remove("active"));
-        document.querySelector(`#${activeId}`).classList.add("active");
+        const activeEl = document.querySelector(`#${activeId}`);
+        if (activeEl) activeEl.classList.add("active");
     }
 
-    document.querySelector("#home").addEventListener("click", (e) => {
+    document.querySelector("#home")?.addEventListener("click", (e) => {
         e.preventDefault();
         setActiveLink("home");
-        pageTitle.textContent = "Home";
+        if (pageTitle) pageTitle.textContent = "Home";
         createTempleCards(temples);
     });
 
-    document.querySelector("#old").addEventListener("click", (e) => {
+    document.querySelector("#old")?.addEventListener("click", (e) => {
         e.preventDefault();
         setActiveLink("old");
-        pageTitle.textContent = "Old";
+        if (pageTitle) pageTitle.textContent = "Old";
         createTempleCards(temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) < 1900));
     });
 
-    document.querySelector("#new").addEventListener("click", (e) => {
+    document.querySelector("#new")?.addEventListener("click", (e) => {
         e.preventDefault();
         setActiveLink("new");
-        pageTitle.textContent = "New";
+        if (pageTitle) pageTitle.textContent = "New";
         createTempleCards(temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) > 2000));
     });
 
-    document.querySelector("#large").addEventListener("click", (e) => {
+    document.querySelector("#large")?.addEventListener("click", (e) => {
         e.preventDefault();
         setActiveLink("large");
-        pageTitle.textContent = "Large";
+        if (pageTitle) pageTitle.textContent = "Large";
         createTempleCards(temples.filter((temple) => temple.area > 90000));
     });
 
-    document.querySelector("#small").addEventListener("click", (e) => {
+    document.querySelector("#small")?.addEventListener("click", (e) => {
         e.preventDefault();
         setActiveLink("small");
-        pageTitle.textContent = "Small";
+        if (pageTitle) pageTitle.textContent = "Small";
         createTempleCards(temples.filter((temple) => temple.area < 10000));
     });
 });
