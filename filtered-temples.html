@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Filtered Temple Picture Album - Emmanuel Sendegeya</title>
+    <meta name="description"
+        content="Dynamic Filtered Temple Picture Album developed by Emmanuel Sendegeya for WDD 131 using JavaScript array filtering and lazy loading.">
+    <meta name="author" content="Emmanuel Sendegeya">
+
+    <!-- Google Fonts API Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Mobile-First External Asset Links -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button id="menu" aria-label="Toggle Navigation Menu"></button>
+            <nav class="navigation">
+                <a href="#" id="home" class="active">Home</a>
+                <a href="#" id="old">Old</a>
+                <a href="#" id="new">New</a>
+                <a href="#" id="large">Large</a>
+                <a href="#" id="small">Small</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2 id="page-title">Home</h2>
+        <div class="gallery-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Emmanuel Sendegeya | Burundi</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
