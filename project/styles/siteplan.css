@@ -193,7 +193,6 @@ li {
     border-radius: 6px;
     padding: 1rem;
     text-align: center;
-    overflow-x: auto;
 }
 
 .wireframe-box h3 {
@@ -201,6 +200,82 @@ li {
     color: var(--brand-blue);
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
+}
+
+.wf-frame {
+    border: 2px solid var(--brand-blue);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.wf-mobile {
+    max-width: 260px;
+}
+
+.wf-desktop {
+    width: 100%;
+}
+
+.wf-bar {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.wf-frame .wf-bar:last-child {
+    margin-bottom: 0;
+}
+
+.wf-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wf-hero {
+    background-color: #e0edff;
+    border: 1px solid var(--brand-blue);
+    padding: 14px 10px;
+    margin-bottom: 8px;
+    font-size: 0.82rem;
+}
+
+.wf-hero p {
+    margin-bottom: 6px;
+}
+
+.wf-btn {
+    display: inline-block;
+    background-color: var(--accent-red);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.wf-block {
+    background-color: #f1f5f9;
+    border: 1px solid #94a3b8;
+    padding: 12px 8px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+.wf-cols-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.wf-cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
 }
 
 footer {
