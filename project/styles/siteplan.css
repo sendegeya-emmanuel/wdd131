@@ -24,7 +24,6 @@ body {
     line-height: 1.65;
 }
 
-/* Header */
 header {
     background-color: var(--brand-blue);
     color: #ffffff;
@@ -69,7 +68,6 @@ header h1 {
     margin: 0;
 }
 
-/* Main Content */
 main {
     max-width: 960px;
     margin: 2rem auto;
@@ -124,7 +122,6 @@ li {
     margin-bottom: 0.45rem;
 }
 
-/* Color Schema Grid */
 .color-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -167,7 +164,6 @@ li {
     background-color: #0F172A;
 }
 
-/* Typography Section */
 .typo-box {
     background-color: var(--card-white);
     border-left: 5px solid var(--brand-blue);
@@ -184,7 +180,6 @@ li {
     font-family: var(--font-body);
 }
 
-/* Wireframes Grid */
 .wireframe-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -208,7 +203,6 @@ li {
     font-size: 1.1rem;
 }
 
-/* Footer */
 footer {
     background-color: var(--brand-blue);
     color: #ffffff;
