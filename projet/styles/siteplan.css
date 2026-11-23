@@ -1,0 +1,226 @@
+:root {
+    --brand-blue: #0052B4;
+    --brand-blue-dark: #003b82;
+    --bg-ice: #F0F6FC;
+    --accent-green: #1EB53A;
+    --accent-red: #CE1126;
+    --text-dark: #0F172A;
+    --card-white: #FFFFFF;
+    --border-gray: #CBD5E1;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-ice);
+    color: var(--text-dark);
+    line-height: 1.65;
+}
+
+/* Header */
+header {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    border-bottom: 6px solid var(--accent-green);
+}
+
+.header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.logo {
+    border-radius: 12px;
+    background-color: var(--brand-blue);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+
+.doc-label {
+    font-size: 0.78rem;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+    color: #dbeafe;
+    margin-bottom: 0.15rem;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e0f2fe;
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+section {
+    margin-bottom: 2.25rem;
+}
+
+.welcome-banner {
+    background-color: var(--card-white);
+    border-left: 6px solid var(--accent-red);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 82, 180, 0.08);
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--brand-blue-dark);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--brand-blue);
+    font-size: 1.45rem;
+    display: inline-block;
+    border-bottom: 3px solid var(--accent-green);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.85rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+code {
+    background-color: #dbeafe;
+    color: var(--brand-blue-dark);
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+ul {
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.45rem;
+}
+
+/* Color Schema Grid */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-card {
+    background-color: var(--card-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.swatch {
+    height: 58px;
+    border-radius: 4px;
+    border: 1px solid var(--border-gray);
+    margin-bottom: 0.6rem;
+}
+
+.swatch-blue {
+    background-color: #0052B4;
+}
+
+.swatch-bg {
+    background-color: #F0F6FC;
+}
+
+.swatch-green {
+    background-color: #1EB53A;
+}
+
+.swatch-red {
+    background-color: #CE1126;
+}
+
+.swatch-text {
+    background-color: #0F172A;
+}
+
+/* Typography Section */
+.typo-box {
+    background-color: var(--card-white);
+    border-left: 5px solid var(--brand-blue);
+    padding: 1.1rem 1.25rem;
+    border-radius: 4px;
+}
+
+.font-heading-sample {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+}
+
+.font-body-sample {
+    font-family: var(--font-body);
+}
+
+/* Wireframes Grid */
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.wireframe-box {
+    background-color: var(--card-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.wireframe-box h3 {
+    font-family: var(--font-heading);
+    color: var(--brand-blue);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    border-top: 5px solid var(--accent-red);
+}
+
+@media (min-width: 768px) {
+    .wireframe-grid {
+        grid-template-columns: 1fr 1.6fr;
+    }
+}
