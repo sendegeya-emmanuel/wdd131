@@ -1,34 +1,18 @@
-:root {
-    --brand-blue: #0052B4;
-    --brand-blue-dark: #003b82;
-    --bg-ice: #F0F6FC;
-    --accent-green: #1EB53A;
-    --accent-red: #CE1126;
-    --text-dark: #0F172A;
-    --card-white: #FFFFFF;
-    --border-gray: #CBD5E1;
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
-}
-
-* {
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: var(--font-body);
-    background-color: var(--bg-ice);
-    color: var(--text-dark);
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F0F6FC;
+    color: #0F172A;
     line-height: 1.65;
 }
 
 header {
-    background-color: var(--brand-blue);
+    background-color: #0052B4;
     color: #ffffff;
     padding: 1.5rem 1rem;
-    border-bottom: 6px solid var(--accent-green);
+    border-bottom: 6px solid #1EB53A;
 }
 
 .header-inner {
@@ -41,7 +25,7 @@ header {
 
 .logo {
     border-radius: 12px;
-    background-color: var(--brand-blue);
+    background-color: #0052B4;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -54,7 +38,7 @@ header {
 }
 
 header h1 {
-    font-family: var(--font-heading);
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.1rem;
     font-weight: 800;
     line-height: 1.2;
@@ -78,8 +62,8 @@ section {
 }
 
 .welcome-banner {
-    background-color: var(--card-white);
-    border-left: 6px solid var(--accent-red);
+    background-color: #FFFFFF;
+    border-left: 6px solid #CE1126;
     padding: 1.5rem;
     border-radius: 6px;
     box-shadow: 0 4px 14px rgba(0, 82, 180, 0.08);
@@ -88,15 +72,15 @@ section {
 .lead-text {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--brand-blue-dark);
+    color: #003b82;
 }
 
 h2 {
-    font-family: var(--font-heading);
-    color: var(--brand-blue);
+    font-family: 'Montserrat', sans-serif;
+    color: #0052B4;
     font-size: 1.45rem;
     display: inline-block;
-    border-bottom: 3px solid var(--accent-green);
+    border-bottom: 3px solid #1EB53A;
     padding-bottom: 0.25rem;
     margin-bottom: 0.85rem;
 }
@@ -107,7 +91,7 @@ p {
 
 code {
     background-color: #dbeafe;
-    color: var(--brand-blue-dark);
+    color: #003b82;
     padding: 0.15rem 0.45rem;
     border-radius: 4px;
     font-weight: 600;
@@ -129,8 +113,8 @@ li {
 }
 
 .color-card {
-    background-color: var(--card-white);
-    border: 1px solid var(--border-gray);
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
     border-radius: 6px;
     padding: 0.75rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -139,7 +123,7 @@ li {
 .swatch {
     height: 58px;
     border-radius: 4px;
-    border: 1px solid var(--border-gray);
+    border: 1px solid #CBD5E1;
     margin-bottom: 0.6rem;
 }
 
@@ -164,19 +148,19 @@ li {
 }
 
 .typo-box {
-    background-color: var(--card-white);
-    border-left: 5px solid var(--brand-blue);
+    background-color: #FFFFFF;
+    border-left: 5px solid #0052B4;
     padding: 1.1rem 1.25rem;
     border-radius: 4px;
 }
 
 .font-heading-sample {
-    font-family: var(--font-heading);
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.05rem;
 }
 
 .font-body-sample {
-    font-family: var(--font-body);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wireframe-grid {
@@ -187,22 +171,22 @@ li {
 }
 
 .wireframe-box {
-    background-color: var(--card-white);
-    border: 1px solid var(--border-gray);
+    background-color: #FFFFFF;
+    border: 1px solid #CBD5E1;
     border-radius: 6px;
     padding: 1rem;
     text-align: center;
 }
 
 .wireframe-box h3 {
-    font-family: var(--font-heading);
-    color: var(--brand-blue);
+    font-family: 'Montserrat', sans-serif;
+    color: #0052B4;
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
 }
 
 .wf-frame {
-    border: 2px solid var(--brand-blue);
+    border: 2px solid #0052B4;
     border-radius: 8px;
     padding: 10px;
     background-color: #ffffff;
@@ -218,7 +202,7 @@ li {
 }
 
 .wf-bar {
-    background-color: var(--brand-blue);
+    background-color: #0052B4;
     color: #ffffff;
     padding: 8px 10px;
     font-size: 0.8rem;
@@ -237,7 +221,7 @@ li {
 
 .wf-hero {
     background-color: #e0edff;
-    border: 1px solid var(--brand-blue);
+    border: 1px solid #0052B4;
     padding: 14px 10px;
     margin-bottom: 8px;
     font-size: 0.82rem;
@@ -249,7 +233,7 @@ li {
 
 .wf-btn {
     display: inline-block;
-    background-color: var(--accent-red);
+    background-color: #CE1126;
     color: #ffffff;
     padding: 4px 12px;
     border-radius: 4px;
@@ -278,13 +262,13 @@ li {
 }
 
 footer {
-    background-color: var(--brand-blue);
+    background-color: #0052B4;
     color: #ffffff;
     text-align: center;
     padding: 1.25rem;
     font-size: 0.9rem;
     margin-top: 3rem;
-    border-top: 5px solid var(--accent-red);
+    border-top: 5px solid #CE1126;
 }
 
 @media (min-width: 768px) {
